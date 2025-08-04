@@ -26,18 +26,6 @@ export APPWRITE_PROJECT_ID=<your_project_id>
 export APPWRITE_API_KEY=<your_api_key>
 export APPWRITE_DEVICE_ID=<registered_device_id>
 ```
-Install dependencies:
-```bash
-npm install
-```
-
-Optionally verify the setup without contacting the server:
-```bash
-DRY_RUN=1 npm run send
-```
-
-Send the notification:
-```bash
 npm run send
 ```
 The script in [`scripts/send-notification.js`](scripts/send-notification.js) will create a push message titled *"Hello from Appwrite"* for the target device.
