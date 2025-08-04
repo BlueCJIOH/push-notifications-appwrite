@@ -9,12 +9,6 @@ if (!project || !key || !deviceId) {
   console.error('Missing one of APPWRITE_PROJECT_ID, APPWRITE_API_KEY, or APPWRITE_DEVICE_ID env variables.');
   process.exit(1);
 }
-
-if (process.env.DRY_RUN) {
-  console.log('DRY RUN: would send push notification.');
-  process.exit(0);
-}
-
 const client = new Client()
   .setEndpoint(endpoint)
   .setProject(project)
