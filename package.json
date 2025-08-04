@@ -1,0 +1,17 @@
+{
+  "name": "push-notifications-appwrite",
+  "version": "1.0.0",
+  "description": "https://appwrite.io/ -- self-hosted cloud messaging",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "send": "node scripts/send-notification.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "node-appwrite": "^17.2.0"
+  }
+}
