@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  appwrite:
+    image: appwrite/appwrite:1.5
+    restart: unless-stopped
+    ports:
+      - '80:80'
+      - '443:443'
+    environment:
+      - _APP_ENV=production
+      - _APP_OPENSSL_KEY_V1=${APPWRITE_SECRET:-your-random-secret}
+      - _APP_DOMAIN=localhost
+      - _APP_DOMAIN_TARGET=localhost
+    volumes:
+      - appwrite-storage:/storage:rw
+      - appwrite-config:/config:rw
+
+volumes:
+  appwrite-storage:
+  appwrite-config:
